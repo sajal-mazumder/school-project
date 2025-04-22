@@ -286,6 +286,24 @@ body{
     resize: vertical;
 }
 
+.action_btn{
+    background-color: #4cafeddb;
+    border:none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn{
+    background-color: #4cafeddb;
+    border:none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 /* @@@ table style @@@ */
 
 .student_table{

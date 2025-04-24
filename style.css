@@ -287,21 +287,25 @@ body{
 }
 
 .action_btn{
-    background-color: #4cafeddb;
+    background-color: var(--primary_color);
     border:none;
+    color: white;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .btn{
-    background-color: #4cafeddb;
+    background-color: var(--primary_color);
     border:none;
+    color: white;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 1rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 /* @@@ table style @@@ */

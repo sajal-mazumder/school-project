@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Send Your Info</h2>
+
+    <form id="myForm">
+      <label>
+        Name: <input type="text" id="name" required>
+      </label><br><br>
+      <label>
+        Age: <input type="number" id="age" required>
+      </label><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  
+    <script>
+      document.getElementById('myForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); // prevent page from reloading
+  
+        const name = document.getElementById('name').value;
+        const age = document.getElementById('age').value;
+  
+        try {
+          const response = await fetch('https://api.example.com/data', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, age })
+          });
+  
+          const data = await response.json();
+          console.log('Server Response:', data);
+          alert('Data sent successfully!');
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Failed to send data.');
+        }
+      });
+    </script>
+
+   
+</body>
+</html>
